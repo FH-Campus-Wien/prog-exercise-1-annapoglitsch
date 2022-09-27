@@ -16,17 +16,40 @@ public class App {
         System.out.println("0123456789012345678901");
         System.out.println("         __");
         System.out.println(" _(\\    |@@|");
-        System.out.println("(__/\\__ \\__/ __");
+        System.out.println("(__/\\__ \\--/ __");
         System.out.println("   \\___|----|  |   __");
         System.out.println("       \\ }{ /\\ )_ / _\\");
         System.out.println("       /\\__/\\ \\__O (__");
-        System.out.println("      (--/\\--)");
+        System.out.println("      (--/\\--)    \\__/");
         System.out.println("      _)(  )(_");
+        System.out.println("     `---''---`");
     }
 
     //todo Task 3
     public void sumOfLiterals(){
         // input your solution here
+        // Deklaration
+        char firstZ = 'Z';
+        int hexadezimahl = 0xface;
+        int dezi = 012;
+        long neuerlong = 80L;
+        float neuefloat = 44e-1f;
+        float neuefloat2 = 5.5f;
+        double neuedouble = 8.88e1;
+        double neuedouble2 = 99.9;
+        int sum;
+
+        // umwandeln zu int
+        int intZnew = firstZ;
+        int derneuelong = (int) neuerlong;
+        int derneuefloat = (int) neuefloat;
+        int derneuefloat2 = (int) neuefloat2;
+        int derneuedouble = (int) neuedouble;
+        int derneuedouble2 = (int) neuedouble2;
+
+        //Methode
+        sum = intZnew + hexadezimahl + dezi + derneuelong + derneuefloat + derneuefloat2 + derneuedouble + derneuedouble2;
+        System.out.println(sum);
     }
 
     //todo Task 4
