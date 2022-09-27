@@ -7,11 +7,21 @@ public class App {
     //todo Task 1
     public void sayHelloWorld(){
         // input your solution here
+        System.out.println("Hello World!");
     }
 
     //todo Task 2
     public void helloRobot(){
         // input your solution here
+        System.out.println("0123456789012345678901");
+        System.out.println("         __");
+        System.out.println(" _(\\    |@@|");
+        System.out.println("(__/\\__ \\__/ __");
+        System.out.println("   \\___|----|  |   __");
+        System.out.println("       \\ }{ /\\ )_ / _\\");
+        System.out.println("       /\\__/\\ \\__O (__");
+        System.out.println("      (--/\\--)");
+        System.out.println("      _)(  )(_");
     }
 
     //todo Task 3
