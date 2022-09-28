@@ -55,11 +55,34 @@ public class App {
     //todo Task 4
     public void addTwoNumbers(){
         // input your solution here
+        Scanner firstscan = new Scanner(System.in);
+        Scanner secondscan = new Scanner(System.in);
+
+        int firstnumber = firstscan.nextInt();
+        int secondnumber = secondscan.nextInt();
+
+        System.out.println(firstnumber + secondnumber);
+
     }
 
     //todo Task 5
     public void swapTwoNumbers(){
         // input your solution here
+        //Deklaration
+        Scanner x = new Scanner(System.in);
+        Scanner y = new Scanner(System.in);
+
+        System.out.print("Before Swap: \n");
+        System.out.print("x: ");
+        int x2 = x.nextInt();
+        System.out.print("y: ");
+        int y2 = y.nextInt();
+
+        System.out.print("After Swap: \n");
+        System.out.print("x: " + y2);
+        System.out.print("\ny: " + x2);
+
+
     }
 
     //todo Task 6
