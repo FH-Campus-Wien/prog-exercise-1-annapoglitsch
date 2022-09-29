@@ -1,5 +1,7 @@
 package at.ac.fhcampuswien;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.Scanner;
 
 public class App {
@@ -14,7 +16,7 @@ public class App {
     public void helloRobot(){
         // input your solution here
         System.out.println("0123456789012345678901");
-        System.out.println("         __");
+        System.out.println("         _");
         System.out.println(" _(\\    |@@|");
         System.out.println("(__/\\__ \\--/ __");
         System.out.println("   \\___|----|  |   __");
@@ -61,8 +63,8 @@ public class App {
         int firstnumber = firstscan.nextInt();
         int secondnumber = secondscan.nextInt();
 
-        System.out.println(firstnumber + secondnumber);
-
+        System.out.print(firstnumber + secondnumber);
+        System.lineSeparator();
     }
 
     //todo Task 5
@@ -72,32 +74,85 @@ public class App {
         Scanner x = new Scanner(System.in);
         Scanner y = new Scanner(System.in);
 
-        System.out.print("Before Swap: \n");
+        System.out.print("Before Swap: " + System.lineSeparator());
         System.out.print("x: ");
         int x2 = x.nextInt();
         System.out.print("y: ");
         int y2 = y.nextInt();
 
-        System.out.print("After Swap: \n");
-        System.out.print("x: " + y2);
-        System.out.print("\ny: " + x2);
+        System.out.print("After Swap: " + System.lineSeparator());
+        System.out.println("x: " + y2);
+        System.out.println("y: " + x2);
 
 
     }
 
     //todo Task 6
-    public void compareTwoNumbers(){
+    public void compareTwoNumbers() {
         // input your solution here
+        Scanner nx = new Scanner(System.in);
+        Scanner ny = new Scanner(System.in);
+
+        System.out.print("n1: ");
+        int n1 = nx.nextInt();
+        System.out.print("n2: ");
+        int n2 = ny.nextInt();
+
+        if (n1 > n2) {
+            System.out.println("n1 > n2");
+        }
+            else if (n1 < n2) {
+                System.out.println("n1 < n2");
+            }
+         else {
+            System.out.println("n1 = n2");
+        }
     }
 
     //todo Task 7
     public void ratingSalesPerson(){
         // input your solution here
+        Scanner scan1 = new Scanner(System.in);
+
+        for (int i = 1; i <= 2; i++) {
+            System.out.print("Enter annual Revenue: ");
+            int revenue = scan1.nextInt();
+            System.lineSeparator();
+
+            while (revenue < 0 || revenue >= 100000) {
+                System.out.println("Invalid Revenue");
+            }
+            while (revenue >= 0 || revenue < 20000) {
+                System.out.println("Poor Sales Revenue");
+            }
+            while (revenue >= 20000 || revenue < 50000) {
+                System.out.println("Average Sales Revenue");
+            }
+            while (revenue >= 50000 || revenue < 80000) {
+                System.out.println("Good Sales Revenue");
+            }
+            while (revenue >= 80000 || revenue < 100000) {
+                System.out.println("Excellent Sales Revenue");
+            }
+        }
     }
 
     //todo Task 8
     public void getCommissionRate(){
         // input your solution here
+        Scanner scan1 = new Scanner(System.in);
+        System.out.println("Enter commissionClass: ");
+        int zahl = scan1.nextInt();
+        switch (zahl) {
+            case 1:
+                System.out.println("Your commission Rate was set to 0.01");
+                break;
+            case 2:
+                System.out.println("Your commission Rate was set to 0.02");
+                break;
+            case 3:
+                System.out.println("Your commission Rate was set to 0.03");
+        }
     }
 
     //todo Task 9
