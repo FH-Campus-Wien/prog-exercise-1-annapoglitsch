@@ -1,6 +1,6 @@
 package at.ac.fhcampuswien;
 
-import org.w3c.dom.ls.LSOutput;
+import com.sun.org.apache.xpath.internal.operations.String;
 
 import java.util.Scanner;
 
@@ -16,7 +16,7 @@ public class App {
     public void helloRobot(){
         // input your solution here
         System.out.println("0123456789012345678901");
-        System.out.println("         _");
+        System.out.println("         __");
         System.out.println(" _(\\    |@@|");
         System.out.println("(__/\\__ \\--/ __");
         System.out.println("   \\___|----|  |   __");
@@ -49,7 +49,7 @@ public class App {
         int derneuedouble = (int) neuedouble;
         int derneuedouble2 = (int) neuedouble2;
 
-        //Methode
+        //Methode - Addition
         sum = intZnew + hexadezimahl + dezi + derneuelong + derneuefloat + derneuefloat2 + derneuedouble + derneuedouble2;
         System.out.println(sum);
     }
@@ -57,32 +57,30 @@ public class App {
     //todo Task 4
     public void addTwoNumbers(){
         // input your solution here
+        //Scanner
         Scanner firstscan = new Scanner(System.in);
-        Scanner secondscan = new Scanner(System.in);
 
         int firstnumber = firstscan.nextInt();
-        int secondnumber = secondscan.nextInt();
+        int secondnumber = firstscan.nextInt();
 
-        System.out.print(firstnumber + secondnumber);
-        System.lineSeparator();
+        //Ergebnis - Addition
+        System.out.println(firstnumber + secondnumber);
     }
 
     //todo Task 5
     public void swapTwoNumbers(){
         // input your solution here
-        //Deklaration
-        Scanner x = new Scanner(System.in);
-        Scanner y = new Scanner(System.in);
+        //Scanner
+        Scanner scan = new Scanner(System.in);
+        int x1 = scan.nextInt();
+        int y1 = scan.nextInt();
 
-        System.out.print("Before Swap: " + System.lineSeparator());
-        System.out.print("x: ");
-        int x2 = x.nextInt();
-        System.out.print("y: ");
-        int y2 = y.nextInt();
 
-        System.out.print("After Swap: " + System.lineSeparator());
-        System.out.println("x: " + y2);
-        System.out.println("y: " + x2);
+        System.out.print("Before Swap:" + System.lineSeparator() + "x: y: After Swap:" + System.lineSeparator());
+
+        //Ergebnis
+        System.out.print("x: " + y1 + System.lineSeparator());
+        System.out.print("y: " + x1 + System.lineSeparator());
 
 
     }
@@ -90,80 +88,118 @@ public class App {
     //todo Task 6
     public void compareTwoNumbers() {
         // input your solution here
+        // Scanner
         Scanner nx = new Scanner(System.in);
-        Scanner ny = new Scanner(System.in);
 
-        System.out.print("n1: ");
+        //Deklaration
         int n1 = nx.nextInt();
-        System.out.print("n2: ");
-        int n2 = ny.nextInt();
+        int n2 = nx.nextInt();
 
+        //Definition wann eine Zahl größer ist
         if (n1 > n2) {
-            System.out.println("n1 > n2");
+            System.out.println("n1: n2: n1 > n2");
         }
-            else if (n1 < n2) {
-                System.out.println("n1 < n2");
+            else if (n2 > n1) {
+                System.out.println("n1: n2: n2 > n1");
             }
          else {
-            System.out.println("n1 = n2");
+            System.out.println("n1: n2: n1 == n2");
         }
     }
 
     //todo Task 7
     public void ratingSalesPerson(){
         // input your solution here
+        //Scanner
         Scanner scan1 = new Scanner(System.in);
+        System.out.print("Enter annual Revenue: ");
+        int einnahmen = scan1.nextInt();
 
-        for (int i = 1; i <= 2; i++) {
-            System.out.print("Enter annual Revenue: ");
-            int revenue = scan1.nextInt();
-            System.lineSeparator();
-
-            while (revenue < 0 || revenue >= 100000) {
-                System.out.println("Invalid Revenue");
+        //Methode-Ergebnis
+        if (einnahmen < 0 || einnahmen >= 100000) {
+            System.out.println("Invalid Revenue");
             }
-            while (revenue >= 0 || revenue < 20000) {
+            if (einnahmen >= 0 && einnahmen < 20000) {
                 System.out.println("Poor Sales Revenue");
             }
-            while (revenue >= 20000 || revenue < 50000) {
+            if (einnahmen >= 20000 && einnahmen < 50000) {
                 System.out.println("Average Sales Revenue");
             }
-            while (revenue >= 50000 || revenue < 80000) {
+            if (einnahmen >= 50000 && einnahmen < 80000) {
                 System.out.println("Good Sales Revenue");
             }
-            while (revenue >= 80000 || revenue < 100000) {
+            if (einnahmen >= 80000 && einnahmen < 100000) {
                 System.out.println("Excellent Sales Revenue");
             }
         }
-    }
 
     //todo Task 8
     public void getCommissionRate(){
         // input your solution here
+        //Scanner
         Scanner scan1 = new Scanner(System.in);
-        System.out.println("Enter commissionClass: ");
+
+        System.out.print("Enter CommissionClass: ");
+
+        //Switch-Methode, einzelne Situationen/Fälle
         int zahl = scan1.nextInt();
+         double zahl2;
+
         switch (zahl) {
             case 1:
-                System.out.println("Your commission Rate was set to 0.01");
+                zahl2 = 0.01;
                 break;
             case 2:
-                System.out.println("Your commission Rate was set to 0.02");
+                zahl2 = 0.02;
                 break;
             case 3:
-                System.out.println("Your commission Rate was set to 0.03");
+                zahl2 = 0.03;
+                break;
+            case 4:
+                zahl2 = 0.04;
+               break;
+            default: zahl2 = 0;
         }
+        //Ergebnis
+        System.out.println("Your Commission Rate was set to " + zahl2);
     }
 
     //todo Task 9
     public void leapyear(){
         // input your solution here
+        //Scanner und Deklaration
+        Scanner scan1 = new Scanner(System.in);
+        System.out.print("Year: ");
+        int zahl = scan1.nextInt();
+
+        //Definition Schaltjahr
+        if (zahl%100 == 0 && zahl%4 == 0 && zahl%400 == 0) {
+              System.out.println("Leapyear");
+          } else {
+              System.out.println("Not a Leapyear");
+          }
+
     }
 
     //todo Task 10
     public void transposedNumbers(){
         // input your solution here
+        //Scanner
+        Scanner scanner= new Scanner(System.in);
+        System.out.print("Number: ");
+        int zahl = scanner.nextInt();
+
+        //Einzelne Stellen erhalten und addieren
+        int einerstelle = zahl%10;
+        int zehnerstelle = (zahl/10)%10;
+        int hunderterstelle = (zahl/100)%10;
+
+        int umgekehrtezahl = (einerstelle * 100) + (zehnerstelle * 10) + hunderterstelle;
+
+        //Ergebnis
+        System.out.println(umgekehrtezahl);
     }
+
 
 
     public static void main(String[] args){
